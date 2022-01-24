@@ -122,7 +122,7 @@ function gameRestart() {
     _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 60;
+    _gameTimeNum = 30;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
@@ -337,7 +337,7 @@ function backBtn() {
 function shareText(score) {
     var date2 = new Date();
     deviation_time = (date2.getTime() - _date1.getTime())
-    if (deviation_time > 23000) {
+    if (deviation_time > 203000) {
         return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
